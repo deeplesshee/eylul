@@ -1,0 +1,103 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef1f5; /* Light blue-gray background */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 25px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 650px; /* Slightly wider for more text */
+}
+
+h1 {
+    color: #2c3e50; /* Darker blue */
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+#question-text {
+    font-size: 1.25em;
+    color: #555;
+    margin-bottom: 25px;
+    min-height: 45px;
+    line-height: 1.6;
+}
+
+#options-area {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+button {
+    background-color: #3498db; /* Primary blue */
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+button:active {
+    background-color: #2471a3; /* Even darker on active */
+    transform: scale(0.97); /* Visual feedback for click */
+}
+
+#result-area {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+#result-area p {
+    font-size: 1.15em;
+    color: #28a745; /* Success green for result */
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+#result-area button {
+    background-color: #5cb85c; /* Green for restart */
+}
+#result-area button:hover {
+    background-color: #4cae4c; /* Darker green */
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Responsive Design */
+@media (min-width: 550px) {
+    #options-area {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px; /* More space for row layout */
+    }
+    #options-area button {
+        min-width: 150px;
+    }
+}
